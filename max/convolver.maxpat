@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 42.0, 85.0, 1612.0, 899.0 ],
+		"rect" : [ 26.0, 85.0, 1612.0, 899.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -165,30 +165,6 @@
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 41.0, 217.832275390625, 150.0, 34.0 ],
 					"text" : "Loudspeaker signal monitoring"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-55",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 319.756103515625, 81.749908447265625, 100.0, 22.0 ],
-					"text" : "r OSCtoggleconv"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-52",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 619.0, 30.719512939453125, 92.0, 22.0 ],
-					"text" : "r OSCloadroom"
 				}
 
 			}
@@ -396,12 +372,13 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-62",
+									"linecount" : 5,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 129.0, 311.0, 142.0, 22.0 ],
-									"text" : "E:/fmheu/filters/filename"
+									"patching_rect" : [ 129.0, 311.0, 142.0, 77.0 ],
+									"text" : "\"C:/Users/fmheu/OneDrive - Danmarks Tekniske Universitet/sound-field-control-room/data//w_resampled.wav\""
 								}
 
 							}
@@ -432,14 +409,16 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-58",
+									"linecount" : 7,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 301.0, 194.0, 95.0, 22.0 ],
+									"patching_rect" : [ 301.0, 194.0, 95.0, 105.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 6.0, 34.0, 184.0, 22.0 ],
-									"text" : "E:/fmheu/filters"
+									"presentation_linecount" : 4,
+									"presentation_rect" : [ 6.0, 34.0, 184.0, 64.0 ],
+									"text" : "\"C:/Users/fmheu/OneDrive - Danmarks Tekniske Universitet/sound-field-control-room/data/\""
 								}
 
 							}
@@ -1026,7 +1005,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "signal" ],
 									"patching_rect" : [ 50.0, 212.2723388671875, 135.0, 22.0 ],
 									"text" : "multiconvolve~ 1 1 zero"
 								}
@@ -1508,7 +1487,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 528.0, 434.46405029296875, 263.4267578125, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 426.0, 288.78759765625, 290.4267578125, 23.0 ]
+					"presentation_rect" : [ 426.0, 288.78759765625, 290.4267578125, 23.0 ],
+					"text" : "w_resampled.wav"
 				}
 
 			}
@@ -2150,20 +2130,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-79", 0 ],
-					"source" : [ "obj-52", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-36", 0 ],
-					"source" : [ "obj-55", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-80", 0 ],
 					"source" : [ "obj-76", 0 ]
 				}
@@ -2246,6 +2212,10 @@
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "multiconvolve~.mxe64",
+				"type" : "mx64"
 			}
  ],
 		"autosave" : 0,
