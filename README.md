@@ -22,4 +22,11 @@ To open the notebook your browser, type
 
 in the Anaconda Prompt. In there, open the file `intro to sfc experiments.ipynb`.
 
+# Troubleshooting
+
+On windows, if there is an error with libsndfile, reinstall soundfile
+
+    pip uninstall soundfile
+    pip install soundfile
+    
 Good luck!
